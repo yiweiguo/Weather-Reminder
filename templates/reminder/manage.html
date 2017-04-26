@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% block head_title %}Manage Reminders{% endblock %}
+{% block head_title %}Manage Remiders{% endblock %}
 {% block base_content %}
- <div>
+<div>
  <h2>My Reminders</h2>
- <table>
+ <table class="table">
    <thead>
      <tr>
        <th>Zip</th>
@@ -12,14 +12,14 @@
      </tr>
    </thead>
    <tbody>
-   {% for zipcode in zipcodes %}
+   {% for reminder in reminders %}
      <tr>
-       <td>{{ zipcode }}</td>
-       <td>When it rains.</td>
-       <td>DELETE</td>
+       <td>{{ reminder.zipcode }}</td>
+       <td>{% for index, label in reminder.WARNING_CHOICE %}{% if reminder.warning_event == index %}{{ label }}{% endif %}{% endfor %}</td>
+       <td><a href="/del_reminder?id={{ reminder.id }}">x</a></td>
      </tr>
    {% endfor %}
    </tbody>
  </table>
- </div>
+</div>
 {% endblock %}
