@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+def manage(request):
+   zipcodes = range(10001,10010)
+   return render(request, 'manage.html', {'zipcodes': zipcodes})
+
+
+
