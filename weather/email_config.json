@@ -1,0 +1,8 @@
+{
+"EMAIL_USE_TLS": true,
+"EMAIL_HOST": "smtp.gmail.com",
+"EMAIL_PORT": 587,
+"EMAIL_HOST_USER": "yiweiguo0301@gmail.com",
+"EMAIL_HOST_PASSWORD": "xiaowei536331",
+"DEFAULT_FROM_EMAIL": "yiweiguo0301@gmail.com"
+}

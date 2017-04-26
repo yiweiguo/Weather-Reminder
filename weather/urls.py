@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^del_reminder/', reminder_views.del_reminder),
     url(r'^accounts/', include('allauth.urls')),
+    url(r'^test_email/', reminder_views.test_email),
 ]
